@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--Window窗体-->
+    <SolidColorBrush x:Key="Window_Title_Fgc" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="Window_Title_Btn_Bgc" Color="Green"></SolidColorBrush>
+    <SolidColorBrush x:Key="Window_Title_Btn_Fgc" Color="White"></SolidColorBrush>
+    <!--Window窗体-->
+
+    <SolidColorBrush x:Key="Border_Brush" Color="#40000000"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="DisEnable_Color" Color="#50000000"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="Enable_Button_Fgc" Color="#ffffff"></SolidColorBrush>
+    <SolidColorBrush x:Key="Enable_Button_Bgc" Color="#5080ff"></SolidColorBrush>
+
+    <SolidColorBrush x:Key="Title_Text_Color" Color="Black"></SolidColorBrush>
+    <SolidColorBrush x:Key="Default_Text_Color" Color="#333333"></SolidColorBrush>
+</ResourceDictionary>

@@ -1,0 +1,50 @@
+﻿<Window x:Class="KDHY.DW.Client.MainWindow"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:behavior="clr-namespace:KDHY.DW.Client.Behaviors"
+        xmlns:local="clr-namespace:KDHY.DW.Client"
+        mc:Ignorable="d"
+        x:Name="HostWindow"
+        Style="{StaticResource WndStyle}"
+        Title="定位测试软件" Height="800" Width="1400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Background="Transparent" Style="{x:Null}">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="#101556">
+                        <i:Interaction.Behaviors>
+                            <behavior:TitleBehavior></behavior:TitleBehavior>
+                        </i:Interaction.Behaviors>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+            <i:Interaction.Behaviors>
+                <behavior:TitleBehavior></behavior:TitleBehavior>
+            </i:Interaction.Behaviors>
+        </Button>
+        <Grid Grid.Row="0" Grid.RowSpan="2">
+            <TabControl Style="{StaticResource TabControlWithUnderLineStyle}" SelectedIndex="1">
+                <TabItem Header="自动定位" Style="{StaticResource TabItemExWithUnderLineStyle}">
+                    <Grid Background="Green"></Grid>
+                </TabItem>
+                <TabItem Header="手动定位" Style="{StaticResource TabItemExWithUnderLineStyle}">
+                    <local:HandLocView TextBlock.Foreground="Black">
+
+                    </local:HandLocView>
+
+                </TabItem>
+                <TabItem Header="参数管理" Style="{StaticResource TabItemExWithUnderLineStyle}">
+                    <Grid Background="Blue"></Grid>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Window>
