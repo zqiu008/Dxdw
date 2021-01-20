@@ -10,7 +10,7 @@
     <Grid Background="#dddddd">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"></ColumnDefinition>
-            <ColumnDefinition Width="700"></ColumnDefinition>
+            <ColumnDefinition Width="580"></ColumnDefinition>
             <ColumnDefinition Width="10"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="10"></ColumnDefinition>
@@ -26,7 +26,7 @@
                 Background="White">
             <Grid Margin="15">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="600"></RowDefinition>
+                    <RowDefinition Height="320"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
                 <Grid>
@@ -125,13 +125,7 @@
                             <TextBox Text="-34580 Hz" Margin="0,0,10,0" Height="28" Width="150"/>
                         </StackPanel>
                         <TextBlock Height="1" Width="535" Canvas.Bottom="2" Background="{StaticResource Border_Brush}"></TextBlock>
-                        <hc:CalendarWithClock Width="460" 
-                                              Height="380"
-                                              Panel.ZIndex="10"
-                                              Grid.ColumnSpan="3"
-                                              Visibility="Hidden"
-                                              SelectedDateTimeChanged="CalendarClock_SelectedDateTimeChanged"
-                                              x:Name="CalendarClock" Canvas.Left="71" Canvas.Top="220"></hc:CalendarWithClock>
+                        
                     </Canvas>
                 </Grid>
                 <Grid Grid.Row="1">
@@ -160,6 +154,15 @@
                         </ListBox>
                     </Border>
                 </Grid>
+
+                <hc:CalendarWithClock Width="460" 
+                                      Grid.RowSpan="3"
+                                              Height="380"
+                                              Panel.ZIndex="10"
+                                              Grid.ColumnSpan="3"
+                                              Visibility="Hidden"
+                                              SelectedDateTimeChanged="CalendarClock_SelectedDateTimeChanged"
+                                              x:Name="CalendarClock"></hc:CalendarWithClock>
             </Grid>
         </Border>
         <Border Background="White"
